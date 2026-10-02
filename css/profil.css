@@ -1,0 +1,24 @@
+/*--头像格式---*/
+
+.avatar-container {
+     height: 100vh;
+     /* Flex布局：水平+垂直居中 */
+    display: flex;
+    align-items: center;   /* 垂直居中 */
+    justify-content: center;/* 水平居中 */
+    background: #93d2dc;
+}
+.designer-avatar {
+     width: 180px;         
+    border-radius: 50%;    
+     border: 5px solid #e599d4;
+     box-shadow: 0 0 20px rgba(0,0,0,0.1); 
+ }
+ .designer-name{
+    color:#f8f6f9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: 200;
+    font-display: block;
+    text-shadow: 1px 1px #eee8e8;
+ }

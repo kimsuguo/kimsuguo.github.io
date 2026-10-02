@@ -1,0 +1,173 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft Yahei', '思源黑体', sans-serif;
+}
+
+body {
+    background-color: #C99C86;
+    color: #333;
+}
+
+/* 导航栏样式 */
+ .navbar {
+   position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 999;           
+   
+}
+.navbar .logo {
+    font-size: 22px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+}
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.navbar .nav-links a.active,
+.navbar .nav-links a:hover {
+    color: #2668b3; 
+}
+/* 个人介绍主体样式 */
+.about-main {
+    padding: 150px 40px 80px; /* 预留导航栏高度 */
+    min-height: calc(100vh - 60px); /* 适配页面高度 */
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 头像区域 */
+.about-avatar-box {
+    text-align: center;
+}
+
+.about-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgb(158, 175, 224);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 文字内容区域 */
+.about-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.about-name {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.about-tagline {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* 标签云 */
+.about-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.about-keywords span {
+    padding: 8px 18px;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.about-keywords span:hover {
+    transform: scale(1.05);
+    color: #d4a373;
+}
+
+/* 个人描述 */
+.about-desc {
+    line-height: 1.8;
+    color: #444;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-desc p {
+    margin-bottom: 15px;
+}
+
+/* 个人座右铭 */
+.about-motto {
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 底部版权 */
+.footer {
+    padding: 25px 40px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* 响应式适配（移动端） */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar .nav-links {
+        gap: 20px;
+    }
+    .about-main {
+        padding: 120px 20px 60px;
+    }
+    .about-name {
+        font-size: 28px;
+    }
+    .about-desc {
+        text-align: center;
+    }
+}

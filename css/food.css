@@ -1,0 +1,170 @@
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 999;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a.active,
+.navbar .nav-links a:hover {
+    color: #2668b3; 
+}
+.body{
+    background-color: #d89f63;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    color: black;
+    padding-top: 100px;
+    margin: 0;
+}
+.header{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 30px ;
+    padding-top: 20px;
+    background-color: #d89f63;
+    margin-bottom: 30px;
+   margin-top: 30px;  
+    
+}
+.header h1{
+    color: black;
+    font-size: 28px;
+    margin: 0;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #d89f63;
+    margin: auto;
+    padding: auto;
+}
+/*相册的菜单样式*/
+ul#album{
+    list-style: none;
+    background-color: #d89f63;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap:10px;
+}
+
+ul#album li{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(100% / 3 - 20px);
+    background-color: rgba(255, 255, 255, .8);
+    opacity: .8;
+  
+}
+ul#album li:hover{
+    opacity: 1;
+    box-shadow: 2px 2px 2px 0px rgba(48, 48, 48, .3);
+    transition: all 0.7s ease;
+
+}
+figure{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+ul#album li a:visited, ul#album li a:hover{
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+ul#album li a{
+
+    text-decoration: none;
+    color: inherit;
+    
+}
+ul#album li a p{
+    font-size: 90%;
+    color: #413031;
+}
+
+ul#album li a img{
+    width: 100%;
+    border-radius: 5px;
+}
+/*自适应样式*/
+/* 炒鸡小屏手机 (phones, 600px and down) */
+ 
+@media only screen and (max-width: 600px) {
+    ul#album li{
+        flex-basis: auto;
+    }
+
+}
+ 
+/* 中等手机以及竖屏平板 (portrait tablets and large phones, 600px and up) */
+ 
+@media only screen and (min-width: 600px) {
+    ul#album li{
+        flex-basis: calc(100% / 2 - 10px);
+    }
+}
+ 
+/* 横屏平板 (landscape tablets, 768px and up) */
+ 
+@media only screen and (min-width: 768px) {
+    ul#album li{
+        flex-basis: calc(100% / 2 - 10px);
+    }
+}
+
+ 
+/* 中小型笔记本电脑及台式机 (laptops/desktops, 992px and up) */
+ 
+@media only screen and (min-width: 992px) {
+     ul#album li{
+        flex-basis: calc(100% / 3 - 20px);
+    }
+
+}
+ 
+/* 宽屏笔记本及台式机 (large laptops and desktops, 1200px and up) */
+ 
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+
